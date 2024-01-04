@@ -4,6 +4,7 @@ Chris Gooch:
 - Wired Passive IR sensor
 - Wired Magnetic contact / door sensor
 - 64 G Sandisk MicroSD card
+- 5 port 10/100 dumb ethernet switch
 
 
 Mitch Elfers:
