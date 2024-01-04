@@ -1,0 +1,107 @@
+Functional Description:
+A security alarm system which has typical sensors (door/window open, motion, 
+glass break, etc) which can be armed in "Home/Here" mode and in "Away" mode.
+Home/Here mode monitors perimeter sensors only (door/window open), ignores
+motion sensors.   "Away" mode monitors all sensors for intrusion.
+
+If intrusion is sensed while armed, a specified delay is counted down.   
+If a valid disarm code is entered during the countdown, the system is
+disarmed and awaits user input.   If no valid disarm code is entered during
+the delay countdown, an alarm is activated, sirens go off, strobes, etc.
+Also a list of people are notified of the alarm condition using various
+specified means.
+
+The system should also be able to integrate envirnmental sensors (Temperature,
+water, fire, etc) and monitor this continuously, and alert people of any 
+unacceptable environmental conditions. 
+
+Stakeholders:
+Agency CUEs
+Mitch
+Lana
+Heather
+Robert
+Larry
+Paul
+NMD Staff
+USPP Staff
+USBC Staff
+Splunk logging
+other logging (potentially)
+notification systems (email, text, voip? others?)
+
+How do we measure success?:
+We are able to tell other agencies "we're replacing the alarm, look for a 
+touchpad replacing the keypad, use your
+ current PIN" and that we have
+actually replaced/installed the alarm in every computer room.
+
+Roadmap:
+
+Requirements:  (need MVP defined...)
+IP connected
+wired connections only, no wireless
+   IT security concerns
+Ideally no bluetooth
+Dedicated Battery (pack) backup for 15 minutes
+
+Leverages installed sensors, siren.   
+Does not use current keypad - replaced by:
+Wall mounted touchpad.   
+
+Logs to syslog (splunk)
+    Alarm date/time
+    Alarm arm (who, mode Home/Away)
+    Alarm disarm (who)
+    Management activities
+        Credentials changed (what users, who made change)
+        Reports generated
+unique PINs/Passwords/keys for each user
+    Re-use existing PINs desirable
+    Ideally hundreds of users available
+Notifications to staff
+    Alarm notifications
+        Entry alarm (which sensor)
+        Environmental alarm (which sensor)
+    Arm notifications
+    Disarm notification
+    Notification methods
+        Text message
+        Email
+Remote management
+    View Status
+    Add/Delete users
+    Generate logs/reports
+        Events timeline
+
+Future features:
+    Automatic arming
+        Time based
+        Idleness based
+    Force PIN change
+        Is periodic pin change desirable?
+        Currently Larry knows everybody's PIN
+           (he doesn't remember them but you get the point)
+        Need method that prevents PIN leakage
+    Remove PIN length limitations
+    Use password rather than PIN
+    Use certificates and NFC rather than PIN
+        if NFC isapproved
+    Disarm using our phones and
+    Get status using our phones
+        needs wireless or some kind of integration
+        if approved
+    Take photo of user on pin entry
+    Maintain core functionality if system degraded
+        needs definitions
+    Integrate Photos into logs
+    Integrate Photos into notifications
+    Additional sensors
+    Environmental monitoring
+    Additional notification methods
+         Teams chat?   Voip?   Slack?
+    Integrate speaker / voice notifications in Computer room
+    2 way intercom
+    Integration of systems shutdowns
+    Centralized management of multiple alarm systems in multiple sites
+

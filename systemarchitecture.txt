@@ -1,0 +1,64 @@
+Architecture:
+
+for each site:
+     1 Konnected Pro board
+     2 Raspberry Pi
+         We bought RPi 3s, SSDs, cases...
+     1 Touch panel display
+     N Existing sensors
+     ? Possible new sensors
+     1 Ethernet switch (~8 Ports.   Maybe POE for resiliency)
+     Battery pack power backup 
+         Konnected and HA Pi for sure
+         Maybe Keypad Pi via POE switch or additional battery pack
+  
+I'm planning to put together a prototyping board, literally 
+a piece of plywood with the hardware and some spare sensors
+mounted.   Probably a piezo instead of a real siren and a LED 
+instead of a real strobe.   Do we have strobes currently?   
+Have to check...
+
+Connections:
+
+Use existing sensors, yeet the old alarm controller board.
+Do not use existing keypad (maybe later)
+Sensors talk to Konnected Pro board (more zones, wired ethernet)
+Konnected pro integrated to Home Assistant
+Home assistant running on Raspberry Pi #1
+Touchpad display running on a Raspberry Pi #2 
+    We might be able to combine HA and Touch panel 
+    into a single pi using HA Core or Container,
+    But a separate touch panel is not supported on HA OS.
+All this talking to each other on a small wired ethernet switch 
+This switch is in the CompRm_Alarm Vlan
+    Can log outbound to splunk
+    Inbound permitted from Priv staff only for management
+    Other security safeguards TBD
+
+Questions:
+    What version of HA are we running?
+    Backups?   Via WAN to server on ABQ CompRm_Alarm Vlan?
+
+HA versions tradeoffs
+
+HA supervised and OS   Allow installations of add-ons (easily).
+HA Core is base linux with HA running on top
+HA Container is base linux with HA running in containers
+HA Supervised adds the supervisor (backups, upgrades) but (IIUC)
+    is still on your underlying OS
+HA OS has an OS managed by the home assistant team.
+
+
+Mitch's version:
+Yea, it is time for new systems.   We can do a cloud free roll-your-own:
+
+  *       Home Assistant Core or Container
+  *       Raspberry Pi 4
+  *       High Endurance micro SD card
+  *       GoControl HUSBZB-1 for Z-wave and Zigbee radio control
+  *       Blink XT2 cameras
+  *       Zigbee or Z-wave sensors (Zigbee is generally less expensive)
+  *       Zigbee or Z-wave siren(s)
+  *       Optional: If your system already has wired contacts, get a unit from Konnected.io and integrate it with Home Assistant
+  *       Optional: cheap Android tablet to use as a keypad
+
