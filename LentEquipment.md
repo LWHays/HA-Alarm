@@ -18,9 +18,12 @@ Mitch Elfers:
 
 Larry Hays:
 - RPI All-In-One Touchscreen kit
-- RPi 3B "Cana Kit" X2
+- RPi 3B "Cana Kit"
+- RPi 3B "Vilros Kit"
 - Konnected Pro board
 - Konnected backup battery
 - Konnected accessory kit
 - Konnected power supply
-- 
+- AM2302 TH sensor
+- Wired magnetic contact / door sensor
+- 64G Sandisk Micro SD card
