@@ -22,4 +22,21 @@ https://community.home-assistant.io/t/export-logs-to-a-remote-syslog/267360/2
 https://community.home-assistant.io/t/external-syslog-server/48104/12
 https://community.home-assistant.io/t/syslog-notifications-where-is-the-syslog/392845
 
+Hardware:
+Deep Dive of Home Assistant installations and hardware options https://www.youtube.com/watch?v=Q2QW3JzLp58
+Notes from Ed:
+...
+Assuming the Pi 3B has 1 GB of RAM
+
+If you are planning on using a Raspberry Pi to run Home Assistant, it is recommended to use a Raspberry Pi 4 with at least 2GB of RAM. This will ensure that your Home Assistant instance has enough memory to run smoothly.Dec 11, 2022
+
+Raspberry Pi 4 (Raspberry Pi 3 Model B is ok too, but the Model A does not have enough RAM).
+
+Raspberry Pi 3 Model B is the earliest model of the third-generation Raspberry Pi. 
+1GB RAM
+
+Default - move to a different port to obfuscate, seems basic, as well as the default URL
+port 8123
+Just within your home network you might know that your Home Assistant is on an IP like 192.168. 1.4 and listening on port 8123. If you use Home Assistant OS and haven't changed any of the defaults, Home Assistant will also be reachable at http://homeassistant.local:8123.
+...
 
