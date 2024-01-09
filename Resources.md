@@ -24,6 +24,7 @@ https://community.home-assistant.io/t/syslog-notifications-where-is-the-syslog/3
 
 Hardware:
 Deep Dive of Home Assistant installations and hardware options https://www.youtube.com/watch?v=Q2QW3JzLp58
+
 Notes from Ed:
 ...
 Assuming the Pi 3B has 1 GB of RAM
