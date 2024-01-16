@@ -22,5 +22,9 @@ Figure out how to log to syslog from Home Assistant  PAUL
 
 Re-Flash Konnected boards with ESPHome MVP LARRY
 
-Conference room setup
+Conference room setup Larry
 
+Additional tasks, not prioritized
+- Disable Wifi on RPi in Home Assistant
+- Disable Wifi on RPi for touchpad
+- 3d Print a new touchpad + RPi case
