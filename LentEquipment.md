@@ -8,6 +8,8 @@ Chris Gooch:
 - Konnected Power Supply
 - Konnected backup battery
 - Konnected Accessory Kit
+- Power strip from JMART
+- various ethernet cables
 
 
 Mitch Elfers:
@@ -21,9 +23,18 @@ Larry Hays:
 - RPi 3B "Cana Kit"
 - RPi 3B "Vilros Kit"
 - Konnected Pro board
+- 5 port 10/100 dumb ethernet switch
 - Konnected backup battery
 - Konnected accessory kit
 - Konnected power supply
 - AM2302 TH sensor
 - Wired magnetic contact / door sensor
+- 64G Sandisk Micro SD card
+- Power Strip from JMART
+- various ethernet cables
+
+
+
+Kyle Hanks:
+- RPi 3B "Vilros Kit"
 - 64G Sandisk Micro SD card
