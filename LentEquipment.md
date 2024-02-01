@@ -29,7 +29,7 @@ Larry Hays:
 - Konnected power supply
 - AM2302 TH sensor
 - Wired magnetic contact / door sensor
-- 64G Sandisk Micro SD card
+- 64G Sandisk Micro SD card X2
 - Power Strip from JMART
 - various ethernet cables
 
