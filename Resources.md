@@ -22,6 +22,7 @@ https://community.home-assistant.io/t/export-logs-to-a-remote-syslog/267360/2
 https://community.home-assistant.io/t/external-syslog-server/48104/12
 https://community.home-assistant.io/t/syslog-notifications-where-is-the-syslog/392845
 https://community.home-assistant.io/t/home-assistant-add-on-promtail/293732
+https://github.com/bertbaron/hassio-addons/tree/main/logspout
 
 Hardware:
 Deep Dive of Home Assistant installations and hardware options https://www.youtube.com/watch?v=Q2QW3JzLp58
