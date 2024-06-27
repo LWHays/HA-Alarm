@@ -1,0 +1,126 @@
+Manual install of Home Assistant with Remote SysLogger (syslog for events):
+
+Install HAOS
+    Set up first User
+    Wait ~20 minutes for installation to complete
+
+Install Advanced SSH & Web Terminal
+    [Settings] -> [Add-ons] -> (ADD-ON STORE) (Bottom Right) -> (Advanced SSH & Web Terminal)
+    [Install] 
+    Wait for installation to complete
+    Go to 'Configuration' Tab
+    Enter password and/or authorized keys
+    Return to 'Info' Tab
+    [START]
+    Wait for it to start
+
+ssh to command line
+    [OPEN WEB UI]
+        or
+    ssh to Pi
+
+Install Remote Syslog
+    copy remote_syslog.tar.gz to HomeAssistant
+	   (Located at J:\Administrative Services\Information Services\IS Access Only\ISI\Install\HomeAssistant)
+    
+    go to the HA configuration directory 
+        (the directory containing the configuration.yaml file, typically /homeassistant)
+
+    make subdirectory 'custom_components'
+
+    extract remote_syslog.tar.gz in the custom_components directory
+
+    >>> Start Sanity Check #1 <<<
+
+        Under your HA configuration directory you should now see these files:
+
+        custom_components/remote_syslog/__init__.py
+        custom_components/remote_syslog/manifest.json
+        custom_components/remote_syslog/services.yaml
+        custom_components/remote_syslog/syslogger_tcp.py
+        custom_components/remote_syslog/syslogger_udp.py
+        custom_components/remote_syslog/sysloggercommon.py
+
+    >>> End Sanity Check #1 <<<
+
+    >>> Update configuration.yaml file <<<
+
+    Add the following line to configuration.yaml.
+
+        remote_syslog:  /config/custom_components/remote_syslog 
+
+    >>> configuration.yaml file updated <<<
+
+    >>> Start Sanity Check #2 <<<
+
+    ➜  /config cat configuration.yaml 
+
+    # Loads default set of integrations. Do not remove.
+    default_config:
+
+    # Load frontend themes from the themes folder
+    frontend:
+      themes: !include_dir_merge_named themes
+
+    automation: !include automations.yaml
+    script: !include scripts.yaml
+    scene: !include scenes.yaml
+
+    ...
+
+    remote_syslog: /config/custom_components/remote_syslog/  ! include remote_syslogger
+
+    >>> End Sanity Check #1 <<<
+
+    ** DO NOT SKIP THIS STEP **    
+    Restart Home Assistant
+    ** DO NOT SKIP THIS STEP **
+
+
+Build Automation to test remote_syslogger
+
+    In the HA UI go to "Configuration" -> "Automations", create a new automation and review service options for Actions.
+
+Configure Automation:
+
+    [Settings] -> [Automations & scenes] -> (+ CREATE AUTOMATION)(Bottom Right) -> (Create new automation)
+    
+    [+ ADD TRIGGER(s)] (and  conditions) as required
+        Add appropriate trigger
+
+    [+ ADD ACTION] -> (... Other actions) -> (Call service)
+
+        Service = Remote Syslogger: Remote syslogger
+
+        host = URL or IP Address of Logging Server
+        
+        port = logging TCP or UDP port # (Default: 514)
+
+        protocol = UDP or TCP   (Default: UDP)
+
+        facility = <Select from Menu>
+
+        program = Identifying information for message written to syslog server (HEADER component of the syslog message)
+
+        message = Body of message written to syslog server (MSG component of syslog message)
+
+        loglevel = <Select from Menu>   (PRI / Priority component of the syslog message)
+
+        (SAVE)
+
+            Name = Display Name for Automation in HomeAssistant (Required)
+            Description = Description of Automation
+
+        (Save)
+        
+    Trigger should now result in syslog entry.Manual install of Home Assistant with Remote SysLogger.txt
+
+    Note: 
+
+    If several identical log messages are sent to a syslog server without any other messages between the identical 
+    messages, syslog-ng can suppress the repeated messages and send the message only once, followed by 'the Last 
+    message repeated n times.' message.  From my reading on this there is no reliable way to turn this off.  Before 
+    concluding that the remote_syslog is not working, ensure that multiple different messages are being sent and
+    failing.  If there is a concern about this limitation in production, we may want to include a time stamp, counter
+    or some unique text in every message to ensure the server does not see them as identical.
+
