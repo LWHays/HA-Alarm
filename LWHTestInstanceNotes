@@ -1,0 +1,22 @@
+IP addresses:
+  HA RPi: 172.31.109.210
+  Konnected: 172.31.109.211
+  Touchscreen RPi: 172.31.109.212
+
+Things we want to log
+  armed by {{ who }}
+  disarmed by {{ who }}
+  System triggered, countdown mode at {{ datetime }}
+  Countdown expired, full alarm activated at {{ datetime }}
+  New user {{ new_username }} <added|deleted> by {{ who }}
+
+Alerting/notification
+  Alarm mode triggered at {{ datetime }} (full alarm, countdown expired)
+    email
+    ? Text message
+    ? Teams message
+    ? Other
+
+Other things:
+  Generate report of all authorized users
+  Arm automatically on schedule
