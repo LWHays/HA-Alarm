@@ -1,5 +1,5 @@
 IP addresses:
-  HA RPi: 172.31.109.210
+  HA RPi: 172.31.109.210:8123
   Konnected: 172.31.109.211
   Touchscreen RPi: 172.31.109.212
 
