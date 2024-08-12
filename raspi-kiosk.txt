@@ -1,3 +1,5 @@
+
+
 Raspberry pi is at 172.31.109.212 on nm wifi.  
 
 Kiosk guides:
@@ -13,3 +15,22 @@ I seemed to have a lot of trouble because I created my "hays" user first, so I r
 raspberry pi OS and created abqtouchpad first.    I did go through a screen resize setup step with the wrong screen connected, 
 so I may have to re-do that.   I enabled pi connect, so far ssh is disabled and we still need rfkill.
 2024-08-12
+
+
+reinstated ssh
+reinstated rfkill
+
+Re-did kiosk https://fleetstack.io/blog/raspberry-pi-kiosk-tutorial
+note that you should be logged in as the autologin user if/when you run raspi-config for autologin
+
+This all worked.
+
+Logged in to HA as abqtouchpad and modified preferences / HA default view.   These are saved as cookies, so you have to be 
+on the account and browser you are intending to modify for it to save.   
+
+This worked.
+
+Next problems:
+ABQtouchpad HA display is too small.
+touchpad pi needs to beep when pending armed or pending triggered
+touchpad pi needs to scream when triggered.
