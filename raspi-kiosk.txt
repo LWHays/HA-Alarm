@@ -1,0 +1,15 @@
+Raspberry pi is at 172.31.109.212 on nm wifi.  
+
+Kiosk guides:
+https://www.raspberrypi.com/tutorials/how-to-use-a-raspberry-pi-in-kiosk-mode/
+https://forums.raspberrypi.com/viewtopic.php?t=136979
+https://www.reddit.com/r/homeassistant/comments/wygdvh/how_to_create_a_raspberry_pi_smart_home_kiosk/
+https://fleetstack.io/blog/raspberry-pi-kiosk-tutorial   looks most recent, trying that one first 
+    (I did try the first one, but only got as far as .config/wayfire.ini, which I couldn't find anywhere...)
+
+Using abqtouchpad user on the pi and in HA
+
+I seemed to have a lot of trouble because I created my "hays" user first, so I re-imaged the microSD with the current
+raspberry pi OS and created abqtouchpad first.    I did go through a screen resize setup step with the wrong screen connected, 
+so I may have to re-do that.   I enabled pi connect, so far ssh is disabled and we still need rfkill.
+2024-08-12
