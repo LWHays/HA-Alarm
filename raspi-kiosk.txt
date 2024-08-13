@@ -1,5 +1,3 @@
-
-
 Raspberry pi is at 172.31.109.212 on nm wifi.  
 
 Kiosk guides:
@@ -31,6 +29,6 @@ on the account and browser you are intending to modify for it to save.
 This worked.
 
 Next problems:
-ABQtouchpad HA display is too small.
+ABQtouchpad HA display is too small.   Layout also needs to be rearranged.
 touchpad pi needs to beep when pending armed or pending triggered
 touchpad pi needs to scream when triggered.
