@@ -2,7 +2,9 @@ Alarm Examples
 - https://community.konnected.io/t/i-wrote-a-step-by-step-tutorial-on-how-to-bring-up-a-home-assistant-alarm-panel/24476
 - https://community.home-assistant.io/t/what-features-are-core-users-missing/202509
 - https://konnected.io/pages/home-assistant
-
+- https://github.com/nielsfaber/alarmo-card/issues/89
+- https://www.juanmtech.com/set-up-an-alarm-system-with-home-assistant-and-alarmo/#alarmo-custom-alarm-card
+- 
 Set up an alarm system with Home Assistant and Alarmo https://www.youtube.com/watch?v=oT-Pa-6gnfQ
 
 HA operating system options:
@@ -30,6 +32,16 @@ Syslog to external device:
 Hardware:
 Deep Dive of Home Assistant installations and hardware options 
 - https://www.youtube.com/watch?v=Q2QW3JzLp58
+
+UI:
+Alarm panel, HA standard:
+- https://www.home-assistant.io/dashboards/alarm-panel/
+Dashboard modifications:
+- https://youtu.be/gouMnPxYHDc?si=cWcs35kBhF8WiSJ0    totally custom dashboard, easy mode (mushroom)
+- https://youtu.be/A0fMt8IRKoI?si=nh_9MXWguhvPcj7T    totally custom dashboard, hard mode (minimalist)
+Custom Card:
+- https://developers.home-assistant.io/docs/frontend/custom-ui/custom-card/
+- https://github.com/nielsfaber/alarmo-card/issues/89
 
 Notes from Ed:
 ...
