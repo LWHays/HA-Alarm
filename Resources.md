@@ -7,6 +7,13 @@ Alarm Examples
 - 
 Set up an alarm system with Home Assistant and Alarmo https://www.youtube.com/watch?v=oT-Pa-6gnfQ
 
+Alarm sensors integration:
+- https://support.konnected.io/alarm-panel-pro-conversion-kit
+- https://konnected.io/products/konnected-alarm-panel-pro-12-zone-kit
+- https://support.konnected.io/konnected-alarm-panel-pro-conversion-kit-installation-guide
+- https://www.home-assistant.io/integrations/konnected/
+- https://community.home-assistant.io/t/trouble-inverting-value-from-door-sensor/660070   Inverting values
+  
 HA operating system options:
 - https://www.bentasker.co.uk/posts/blog/general/migrating-from-homeassistant-os-to-homeassistant-in-docker.html
 - https://community.home-assistant.io/t/what-is-the-difference-between-a-dedicated-home-assistant-os-install-and-a-supervised-install/395684
@@ -39,10 +46,22 @@ Alarm panel, HA standard:
 Dashboard modifications:
 - https://youtu.be/gouMnPxYHDc?si=cWcs35kBhF8WiSJ0    totally custom dashboard, easy mode (mushroom)
 - https://youtu.be/A0fMt8IRKoI?si=nh_9MXWguhvPcj7T    totally custom dashboard, hard mode (minimalist)
+- https://community.home-assistant.io/t/mushroom-cards-build-a-beautiful-dashboard-easily-part-1/388590/43 Mushroom
 Custom Card:
 - https://developers.home-assistant.io/docs/frontend/custom-ui/custom-card/
+- https://developers.home-assistant.io/docs/frontend/custom-ui/custom-card-feature/  
 - https://github.com/nielsfaber/alarmo-card/issues/89
+- https://community.home-assistant.io/t/how-to-change-alarm-card-buttons-so-they-are-viewed-easily/511952
+- https://community.home-assistant.io/t/custom-cards-with-gui-editor-as-of-2023/542254/4
+- https://github.com/custom-cards/boilerplate-card
+Kiosk mode: (
+- https://community.home-assistant.io/t/kiosk-mode/425678/9
+- https://github.com/maykar/kiosk-mode
+- 
 
+Duplicate PINs problem / other alarmo pin options:
+- https://community.home-assistant.io/t/touchpad-for-manual-alarm-control-panel-supports-multiple-user-codes/357688
+- 
 Notes from Ed:
 ...
 Assuming the Pi 3B has 1 GB of RAM
