@@ -17,6 +17,7 @@ Touchpad Kiosk defaults to alarm dashboard
   Needed:  Better alarm card - horizontal layout for horizontal touchscreen    --OR--  --INSTEAD--
   Needed:  Change Touchscreen and keypad PI to vertical layout
   Needed:  Use speakers on touchpad RPI for countdown alerts, siren, etc
+  Issue: It's possible and trivial and (difficult to avoid) duplicating PINs
 
 CIRT security notes:
 
