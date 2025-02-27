@@ -78,3 +78,8 @@ port 8123
 Just within your home network you might know that your Home Assistant is on an IP like 192.168. 1.4 and listening on port 8123. If you use Home Assistant OS and haven't changed any of the defaults, Home Assistant will also be reachable at http://homeassistant.local:8123.
 ...
 
+GUI stuff
+
+https://community.home-assistant.io/t/tutorials-how-to-develop-a-custom-card-and-ship-hacs-repositories/526566/10
+https://github.com/home-assistant-tutorials
+
